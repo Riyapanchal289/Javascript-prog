@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Form</title>
+    <style type="text/css">
+        body{
+            background-color: cornflowerblue;
+        }
+        
+    </style>
+    <script type="text/javascript">
+          function divBGChangeToText(){
+				document.getElementById("D1").style.backgroundColor=prompt("Enter Background Color Here..");
+			}
+			
+			function colorPickerDivBG(){
+				document.body.style.backgroundColor=document.getElementById("CP1").value;
+			}
+            
+           function demo1(){
+             alert("Welcome!!!")
+           }
+           
+           function focusdemo()
+           {
+            document.getElementById("fname").style.backgroundColor="red";
+           }
+        
+    </script>
+</head>
+<body>
+    <form>
+        <label for="fname">Username</label><br>
+        <input type="text" id="fname" onfocus="focusdemo" name="fname"><br>
+        <label for="fname">Email</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Password</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="button" value="Ok" onclick="demo1()">
+        <input type="button" value="Cancel" onclick="demo2()"><br><br><br>
+        <input type="button" value="Text Backgrond Color To Div" onclick="divBGChangeToText()"/>
+        <input type="color" id="CP1" onchange="colorPickerDivBG()" />
+
+      </form>
+</body>
+</html>
